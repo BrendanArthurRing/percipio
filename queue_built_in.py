@@ -25,3 +25,26 @@ while not q.empty():
 
 # FIFO policy
 
+q.empty() # True
+
+# queues are thread safe
+# different threads can add and remove from
+# a queue
+
+# Making a stack, using the LifoQueue
+q = queue.LifoQueue()
+
+for i in range(7):
+    q.put(i)
+
+while not q.empty():
+    print(q.get())
+
+# 6
+# 5
+# 4
+# ...
+
+q.empty() # True
+
+# The LifoQueue is thread safe
