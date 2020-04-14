@@ -51,14 +51,24 @@ q.empty() # True
 
 # With the case of multiprocessing
 import time
-
+# added in any order but removed in
+# order of priority
 q = queue.PriorityQueue()
 
 q.put(5)
 q.put(4)
+q.put(1)
 q.put(3)
 q.put(2)
 
 while not q.empty():
     print(q.get())
 
+# 1
+# 2
+# 3
+# 4
+# 5
+
+# Queues, Stacks, and Priority Queues
+# are thread safe.
