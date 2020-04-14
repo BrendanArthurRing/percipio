@@ -48,3 +48,17 @@ while not q.empty():
 q.empty() # True
 
 # The LifoQueue is thread safe
+
+# With the case of multiprocessing
+import time
+
+q = queue.PriorityQueue()
+
+q.put(5)
+q.put(4)
+q.put(3)
+q.put(2)
+
+while not q.empty():
+    print(q.get())
+
